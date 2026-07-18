@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./navigation.module.scss";
 
 const Navigation: React.FC = () => {
   return (
-    <nav className="navbar">
+    <nav className={styles.navbar}>
       <Link to="/">首页</Link>
       <Link to="/about">关于</Link>
       <Link to="/settings">设置</Link>
