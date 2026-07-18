@@ -12,9 +12,8 @@ contextBridge.exposeInMainWorld("versions", {
 
 contextBridge.exposeInMainWorld("electronAPI", {
   cancelBluetoothRequest: () => ipcRenderer.send("cancel-bluetooth-request"),
-  bluetoothPairingRequest: (
-    callback: (event: any, details: Record<string, any>) => void,
-  ) => ipcRenderer.on("bluetooth-pairing-request", callback),
+  bluetoothPairingRequest: (callback: (event: any, details: Record<string, any>) => void) =>
+    ipcRenderer.on("bluetooth-pairing-request", callback),
   bluetoothPairingResponse: (response: Record<string, any>) =>
     ipcRenderer.send("bluetooth-pairing-response", response),
 });

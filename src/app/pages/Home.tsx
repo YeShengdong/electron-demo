@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           }
         }
       }
-
+      
       window.electronAPI.bluetoothPairingResponse(response);
     });
 
