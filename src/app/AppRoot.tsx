@@ -1,8 +1,8 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Home from './pages/Home';
-import About from './pages/About';
-import Settings from './pages/Settings';
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Settings from "./pages/Settings";
 
 function AppRoot() {
   return (
@@ -10,6 +10,11 @@ function AppRoot() {
       <div className="App">
         <Navigation />
         <main className="main-content">
+          <p>
+            本应用正在使用 Chrome ({window.versions.chrome()}), Node.js (
+            {window.versions.node()}), 和 Electron ({window.versions.electron()}
+            )
+          </p>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
